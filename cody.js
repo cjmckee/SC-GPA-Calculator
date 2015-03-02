@@ -30,6 +30,11 @@ var calculate = function ()
 	var weighted = 0;
         
     console.log(stuff + "   " + grade + "   " + type);
+    
+    if (grade > 100)
+	{
+		grade = 100;
+	}
 	
 	if (type == 1)
 	{ 
@@ -44,6 +49,11 @@ var calculate = function ()
 	else
 	{
 		weighted += gradeWeightedAP(grade);
+	}
+	
+	if (grade < 61)
+	{
+		weighted = 0;
 	}
     
         if ($("#none" + k).is(':checked') == false)
